@@ -1,4 +1,4 @@
-﻿# Quantum Vault
+# Quantum Vault
 
 ## Install
 
@@ -6,13 +6,13 @@
 winget install Quantum-suite-org.QuantumVault
 ```
 
-Or download `QuantumVault-0.1.0-Setup.exe` from the [latest release](https://github.com/Quantum-Suite-org/quantum-vault/releases/latest).
+Or download `QuantumVault-0.1.1-Setup.exe` from the [latest release](https://github.com/Quantum-Suite-org/quantum-vault/releases/latest).
 
 Requires Windows 10/11 (x64) and the Microsoft Edge WebView2 Runtime. Without WebView2 the app opens its classic window instead.
 
 **Lightweight secure local note and snippet manager — first Quantum Suite application.**
 
-> v0.1.0 · Windows 10/11 · Offline-first · No accounts · MIT License
+> v0.1.1 · Windows 10/11 · Offline-first · No accounts · MIT License
 
 ---
 
@@ -36,7 +36,7 @@ winget install QuantumSuiteOrg.QuantumVault
 ```
 
 ### Manual
-1. Download `QuantumVault-0.1.0-Setup.exe` from Releases
+1. Download `QuantumVault-0.1.1-Setup.exe` from Releases
 2. Run the installer
 3. Launch **Quantum Vault** from Start Menu
 

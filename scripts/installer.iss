@@ -1,9 +1,9 @@
-﻿; Quantum Vault - Inno Setup Installer Script
-; Version: 0.1.0
+; Quantum Vault - Inno Setup Installer Script
+; Version: 0.1.1
 ; Build with: iscc scripts\installer.iss
 
 #define AppName "Quantum Vault"
-#define AppVersion "0.1.0"
+#define AppVersion "0.1.1"
 #define AppPublisher "Quantum Suite Org"
 #define AppURL "https://github.com/quantum-suite-org/quantum-vault"
 #define AppExeName "QuantumVault.exe"
@@ -43,6 +43,8 @@ Name: "addtopath"; Description: "Add qvault CLI to PATH"; GroupDescription: "Com
 Source: "..\src\gui\bin\Release\net48\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\gui\bin\Release\net48\*.dll"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "..\src\gui\bin\Release\net48\*.config"; DestDir: "{app}"; Flags: ignoreversion
+; Web UI (index.html, styles.css, app.js, boot.js, ...)
+Source: "..\src\gui\web\*"; DestDir: "{app}\web"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; Core DLL
 Source: "..\build\bin\qvault_core.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\build\bin\qvault_core.pdb"; DestDir: "{app}"; Flags: ignoreversion skipifsourcedoesntexist
