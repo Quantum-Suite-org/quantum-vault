@@ -1,0 +1,315 @@
+QUANTUM VAULT
+END USER LICENSE AGREEMENT (EULA)
+
+Version 0.1.2
+Effective date: 11-10-2026
+
+COPYRIGHT NOTICE: Copyright (c) 2026 Quantum Suite. Quantum Vault is free to use. Anyone may use, copy, modify and redistribute it on the terms of this Agreement and the MIT License. Please keep the copyright notice and attribution.
+
+IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT CAREFULLY BEFORE INSTALLING, COPYING, ACCESSING OR OTHERWISE USING THE SOFTWARE. BY CLICKING "I ACCEPT", BY INSTALLING THE SOFTWARE, OR BY RUNNING OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS, DO NOT INSTALL OR USE THE SOFTWARE, AND RETURN OR DELETE ALL COPIES IN YOUR POSSESSION.
+
+SECTION 1. PARTIES AND SCOPE
+
+1.1 This End User License Agreement (the "Agreement") is a legally binding contract between you (either an individual or a single legal entity that you are authorised to bind, referred to as "you" or "Licensee") and Quantum Suite, the publisher and developer of the Software (referred to as "Quantum Suite", "we", "us" or "Licensor").
+
+1.2 "Quantum Suite" is the name under which the Software, its documentation and its related materials are published and maintained. Quantum Suite is also written as "Quantum Suite Org" in the Software's installer, the package manifest and the public repository, and the two names refer to the same publisher. Any reference in this Agreement to "Quantum Suite Org" is a reference to Quantum Suite. Quantum Suite is the name of a project and publishing identity; this Agreement does not describe, and nothing in it should be read as describing, any particular legal form of organisation. Nothing in this Agreement creates any partnership, joint venture, agency or employment relationship between you and the individuals who maintain the Software under the Quantum Suite name.
+
+1.2A "Quantum Vault" is the name of the Software described in this Agreement.
+
+1.3 This Agreement governs the compiled, distributed form of the Software that you obtain from Quantum Suite Org, including the installer, executable files, dynamic link libraries, the web user interface, the command line interface package, the documentation and any updates that Quantum Suite Org makes available (together, the "Software").
+
+1.4 This Agreement is separate from, and does not restrict or replace, the open source license under which the source code of the Software is made available. The source code of Quantum Vault is governed by the terms of the MIT License stated in the LICENSE file in the Software's public repository, and nothing in this Agreement limits any right that the MIT License grants you with respect to that source code. The MIT License grants rights in the source code only. It does not grant any right in the names "Quantum Vault", "Quantum Suite" or "Quantum Suite Org", in any logo, icon, artwork, or visual identity associated with them, or in any other element of Section 3.6 to 3.9, all of which remain subject to this Agreement. Where a conflict arises between this Agreement and the MIT License regarding the source code itself, the MIT License controls. Where a conflict arises regarding the compiled, distributed Software or the matters described in Section 3.6 to 3.9, this Agreement controls.
+
+1.5 If you are accepting this Agreement on behalf of an organisation, you represent and warrant that you have the authority to bind that organisation to this Agreement, and "you" and "Licensee" refer to that organisation.
+
+SECTION 2. DEFINITIONS
+
+2.1 "Assistant" means the local conversational feature of the Software, including its tool-calling agent, which may download, load and execute a language model on your computer.
+
+2.2 "Model" means any machine learning model, including the language model named Qwen2.5-0.5B-Instruct and its associated configuration and tokenizer files, that the Software downloads, stores or executes for the Assistant.
+
+2.3 "Third-Party Components" means software, libraries, models and services that are not owned by Quantum Suite Org and that are included in, downloaded by, or used by the Software, as further described in Section 9.
+
+2.4 "Vault" means the encrypted data store that the Software creates on your computer to hold your notes, snippets, commands, reminders and related content (together, "User Content").
+
+2.5 "Master Password" means the password that you create or enter to protect the Vault.
+
+2.6 "Documentation" means the README, PRIVACY.md, and any other user guides published with the Software.
+
+2.7 "Update" means any new version, patch, fix or modification of the Software that Quantum Suite Org makes available to you.
+
+2.8 "Authorised Use" means use of the Software in accordance with Section 3 and Section 4 of this Agreement.
+
+SECTION 3. LICENSE GRANT
+
+3.1 Quantum Suite grants you a worldwide, royalty-free, non-exclusive, perpetual licence to install, use, copy, modify, merge, publish, distribute and sublicense the Software, for any purpose, personal or commercial. This licence is not conditional on payment. It is subject only to the conditions in Sections 3.6, 3.9 and 4.1 of this Agreement and to the conditions of the MIT License in respect of the source code.
+
+3.2 The licence in Section 3.1 is not limited to any number of devices or users.
+
+3.3 Any copy of the Software that you distribute must include this Agreement, the copyright notice in Section 3.6, and the notices of Third-Party Components, so that recipients receive the same information you received.
+
+3.4 Quantum Suite retains copyright in the Software. Except as stated in this Agreement and in the MIT License, no other rights are granted to you, and none are implied.
+3.5 The Software is licensed, not sold. Quantum Suite retains ownership of the Software, including all copyright and other intellectual property rights in it, and your possession of a copy does not transfer any ownership.
+
+3.6 COPYRIGHT. The Software, including its compiled binaries, source code, user interface files, documentation, artwork, and the arrangement and selection of its content, is protected by copyright law. Copyright in the Software is held by Quantum Suite. Copyright in each Third-Party Component remains with its respective owner. Copyright notices included in the Software or its documentation must not be removed or altered.
+
+3.7 NAMES AND BRANDING. The names "Quantum Suite", "Quantum Suite Org" and "Quantum Vault", and any logo, icon, splash-screen artwork, colour scheme, layout, or visual identity used with the Software (together, the "Brand Elements"), are the identifying names and visual materials of Quantum Suite and its Software. The Brand Elements are not licensed to you under this Agreement or under the MIT License, and you may not use them except as set out in Section 3.8 or 3.9.
+
+3.8 PERMITTED USE OF NAMES. You may refer to "Quantum Vault" and "Quantum Suite" in a truthful and non-misleading manner to identify the Software, for example in a review, a blog post, a tutorial, a bug report, or a statement that you use or have installed the Software. You may not use the Brand Elements in a manner that suggests that your product, service or project is endorsed by, affiliated with, sponsored by, or produced by Quantum Suite, unless Quantum Suite has given you prior written permission.
+
+3.9 PROHIBITED USE OF BRAND ELEMENTS. Without Quantum Suite's prior written permission, you shall not:
+
+(a) use the Brand Elements as the name, logo or identifying name of any software, product, service, domain, repository, package, organisation, or social media account that is distinct from the official Software;
+
+(b) distribute a modified version of the Software under the names "Quantum Vault" or "Quantum Suite" or with the Brand Elements, unless you have removed or changed all Brand Elements and clearly state that your version is not the official Software;
+
+(c) submit a package, manifest, listing or application to any software distribution service (including the Windows Package Manager community repository) that uses the Brand Elements in a way that would cause confusion as to the source of the software, other than the official listing maintained by Quantum Suite;
+
+(d) use the Brand Elements in any advertising or promotion that implies a commercial partnership or endorsement; or
+
+(e) register, or attempt to register, any domain name, social media handle, or repository name that incorporates the Brand Elements, where such registration would be likely to confuse users as to the source of the software.
+
+3.10 NO CLAIM OF OWNERSHIP OF COPYRIGHT THROUGH THIS AGREEMENT. Nothing in this Agreement transfers to you any copyright in the Software or in the Brand Elements. Any right you acquire in the Software arises only under the licence granted in Section 3.1 and, for source code, under the MIT License.
+
+
+3.11 NO ENFORCEMENT INTENT. Quantum Suite does not intend to bring legal action against any person for using, copying, modifying or redistributing the Software in accordance with this Agreement and the MIT License. The copyright notice in the Software, in the LICENSE file and in Section 3.6 states who holds copyright and asks that attribution be kept. It does not restrict use beyond the terms stated here.
+
+SECTION 4. RESTRICTIONS
+
+4.1 You shall not, and shall not permit any third party to:
+
+(a) remove, alter or obscure any copyright notice, licence notice or attribution contained in the Software, or in any copy of it;
+
+(b) use the Brand Elements in a manner prohibited by Section 3.9;
+
+(c) use the Software to store, process or transmit any content that is unlawful, that infringes the rights of others, or that violates any applicable law or regulation;
+
+(d) use the Software to build, distribute or operate malware, unauthorised access tools, or any software intended to compromise the security of computer systems or networks;
+
+(e) circumvent, disable or interfere with any security feature, encryption mechanism or access control included in the Software, in a way that exposes the data of another person;
+
+(f) use the Software in any manner that could damage, disable, overburden or impair any system, network or service;
+
+(g) use the Software in violation of any applicable export control, sanctions or trade restriction law, as further described in Section 13; or
+
+(h) use the Software in any safety-critical application in which a failure of the Software could reasonably be expected to lead to death, personal injury, or severe physical or environmental damage, including medical devices, aviation systems, nuclear facilities, or the control of critical infrastructure.
+
+4.2 You may not use the Software to store or manage personal data of third parties except where you have a lawful basis to do so under applicable data protection law, and you are solely responsible for complying with all such laws.
+
+4.3 You may not use the Software to generate, store or manage material that depicts the sexual exploitation of minors, or to facilitate such exploitation in any form. Any such use is strictly prohibited, will be reported to the appropriate authorities where required by law, and will result in immediate termination of this Agreement.
+
+SECTION 5. INSTALLATION AND SYSTEM REQUIREMENTS
+
+5.1 The Software is designed for Microsoft Windows 10 (version 1809 or later) and Microsoft Windows 11 running on x64 processors. Other operating systems, architectures and configurations are not supported.
+
+5.2 The Software requires the Microsoft Edge WebView2 Runtime for its primary user interface. If the runtime is not present, the Software may fall back to a classic user interface. The Microsoft Edge WebView2 Runtime is provided by Microsoft Corporation under its own licence terms, which you must accept separately.
+
+5.3 The Assistant requires sufficient free disk space and memory to download and run the Model. Quantum Vault does not guarantee that your hardware will be able to run the Model at an acceptable speed or at all.
+
+5.4 Installation requires administrator privileges on your computer. You are responsible for ensuring that you have authority to install software on the computer in question.
+
+5.5 The Software is not intended for use on computers that you do not own or do not have authority to administer.
+
+SECTION 6. UPDATES
+
+6.1 Quantum Suite Org may, but is not obliged to, make Updates available to you. Updates may be delivered by downloading a new installer, through a package manager such as winget, or by other means.
+
+6.2 Updates may be required before you can continue to use certain features of the Software. You agree to install Updates that are designated as security fixes as soon as reasonably practicable.
+
+6.3 Quantum Suite Org does not guarantee that any particular version of the Software will remain available, supported, or compatible with future versions of Windows, WebView2, or any Third-Party Component.
+
+6.4 Updates are subject to this Agreement unless they are accompanied by a separate licence agreement, in which case that separate agreement governs the Update.
+
+SECTION 7. THE VAULT, USER CONTENT AND MASTER PASSWORD
+
+7.1 OWNERSHIP OF USER CONTENT. As between you and Quantum Suite Org, you own all User Content that you create, import or store in the Vault. Quantum Suite Org does not claim any ownership of your User Content, and does not receive a copy of your User Content.
+
+7.2 LOCAL STORAGE. The Vault and all User Content are stored locally on the computer on which the Software is installed, in the data directory described in the Documentation. Quantum Suite Org does not operate a server that stores your User Content and does not have a means of accessing your User Content remotely.
+
+7.3 MASTER PASSWORD. The Vault is protected by a Master Password that you create or enter. You are solely responsible for choosing, remembering and safeguarding the Master Password. The Software does not contain a password recovery mechanism, a backdoor, a master key or a reset facility that would allow Quantum Suite Org or any other person to recover User Content from a Vault whose Master Password has been lost or forgotten.
+
+7.4 CONSEQUENCES OF LOST PASSWORD. IF YOU LOSE OR FORGET YOUR MASTER PASSWORD, THE USER CONTENT IN THE VAULT MAY BECOME PERMANENTLY INACCESSIBLE. QUANTUM SUITE ORG CANNOT RECOVER IT. YOU ACKNOWLEDGE THAT THIS IS A DELIBERATE DESIGN CHOICE MADE TO PROTECT YOUR DATA AND THAT YOU ACCEPT THIS RISK.
+
+7.5 BACKUPS. You are solely responsible for maintaining independent backups of your User Content. Quantum Suite Org strongly recommends that you back up the Vault data directory regularly and store the backup in a secure location separate from the computer on which the Software is installed. Backups must be protected with appropriate care, because they contain encrypted User Content that can be decrypted by anyone who obtains the Master Password.
+
+7.6 ENCRYPTION. The Software uses encryption technologies, including AES-256 through the Windows Cryptography Next Generation (CNG) interface and PBKDF2-SHA256 for key derivation, to protect User Content. No encryption is perfect. Quantum Suite Org does not warrant that the encryption used by the Software is free from defects, that it will remain secure against future advances in cryptanalysis or computing capability, or that it satisfies any particular regulatory standard unless expressly stated in writing.
+
+7.7 DATA LOSS. You acknowledge that the Software may, through defects, hardware failure, software conflicts, user error, or other events, result in the loss, corruption or inaccessibility of User Content. Quantum Suite Org is not liable for any such loss except as stated in Section 11.
+
+7.8 UNINSTALLATION. Uninstalling the Software does not delete the Vault data directory. You may delete that directory manually if you wish. Deleting it permanently destroys User Content that is not backed up elsewhere.
+
+SECTION 8. ASSISTANT, MODEL DOWNLOAD AND OUTPUT
+
+8.1 OPTIONAL DOWNLOAD. The Assistant requires the Model, which the Software downloads from a third-party model repository (currently Hugging Face) the first time you use the Assistant or otherwise choose to download it. The download is initiated by you or by a feature that you have enabled. The Model is approximately several hundred megabytes in size. You are responsible for any data charges, bandwidth costs or other costs associated with the download.
+
+8.2 MODEL LICENCE. The Model is provided by its original authors and distributed through a third-party repository. The Model is subject to its own licence terms, which are published by its authors and which you must comply with in addition to this Agreement. Quantum Suite Org does not own the Model and grants no licence to the Model beyond what the Model's own licence terms permit.
+
+8.3 WEB ACCESS BY THE ASSISTANT. The Assistant includes tools that may search the web and fetch the content of web pages on your behalf. When you use these tools, your search queries and the addresses of the pages you request are transmitted over the internet to third-party services and websites. These services and websites are not operated by Quantum Suite Org, and their handling of data is governed by their own terms and privacy policies. You are responsible for deciding whether to use these tools and for the content you choose to send to them.
+
+8.4 LOCAL PROCESSING. The Model runs locally on your computer. Quantum Suite Org does not receive the prompts you enter into the Assistant or the responses the Model generates. Quantum Suite Org does not operate a server that processes your prompts.
+
+8.5 OUTPUT IS NOT ADVICE. The Assistant generates text using a language model. Its output may be inaccurate, incomplete, out of date, biased, or unsuitable for your purposes. The Assistant does not provide legal, medical, financial, tax, engineering, security or other professional advice. You must independently verify any output before relying on it, and you must not rely on it for any decision that could cause harm or loss if it were wrong.
+
+8.6 OUTPUT OWNERSHIP. To the extent that any rights exist in output generated by the Model, Quantum Suite Org makes no claim to those rights. You are responsible for ensuring that your use of any output complies with applicable law and with the licence terms of the Model.
+
+8.7 REMINDERS AND SCHEDULED ACTIONS. Reminders created through the Software are displayed while the Software is running. Quantum Suite Org does not guarantee that reminders will be displayed at the scheduled time, that they will be displayed if the Software is not running, or that they will be displayed if your computer is asleep, powered off or otherwise unavailable. Do not rely on reminders for time-critical obligations.
+
+SECTION 9. THIRD-PARTY COMPONENTS AND OPEN SOURCE SOFTWARE
+
+9.1 The Software incorporates or depends on Third-Party Components, including without limitation: MahApps.Metro and related packages (MIT License); Microsoft.Web.WebView2 and the Microsoft Edge WebView2 Runtime (Microsoft licence terms); Microsoft.ML.OnnxRuntime and Microsoft.ML.OnnxRuntimeGenAI (MIT License); and the Model described in Section 8. Each Third-Party Component remains subject to the licence terms that apply to it.
+
+9.2 A list of Third-Party Components and their licences is provided with the Documentation. If the list is incomplete, the licence terms of each Third-Party Component still apply to that component.
+
+9.3 Nothing in this Agreement restricts any right you have under the licence terms of a Third-Party Component. Where a Third-Party Component's licence grants you a right that this Agreement purports to restrict, the Third-Party Component's licence governs that component.
+
+9.4 Quantum Suite Org makes no warranty regarding Third-Party Components and is not responsible for their operation, security, availability or content.
+
+9.5 The Software may be distributed with the Microsoft Visual C++ Redistributable or other runtime libraries. Those libraries are subject to Microsoft's licence terms.
+
+SECTION 10. PRIVACY AND DATA
+
+10.1 Quantum Suite Org's privacy practices are described in the PRIVACY.md document distributed with the Software. In the event of any inconsistency between that document and this Agreement, this Agreement governs with respect to the matters it addresses.
+
+10.2 The Software is designed to store your User Content locally. Except for the web access described in Section 8.3, Quantum Suite Org does not intentionally transmit your User Content, your Master Password, or your Assistant prompts to any server operated by Quantum Suite Org.
+
+10.3 Model downloads and the web access described in Section 8.3 involve transmission of data to third-party servers, such as Hugging Face, GitHub, Microsoft services, and the websites you request. Those servers collect information about requests made to them, including your IP address, in accordance with their own policies. Quantum Suite Org has no control over those third-party services.
+
+10.4 You are responsible for complying with all data protection and privacy laws that apply to your use of the Software, including laws that govern the storage of personal data of other people.
+
+10.5 Quantum Suite Org does not sell your personal information. Quantum Suite Org does not provide your personal information to advertisers.
+
+10.6 If you contact Quantum Suite Org through the public issue tracker or other channels, the information you provide will be handled in accordance with the terms of the service through which you contact us.
+
+SECTION 11. DISCLAIMER OF WARRANTIES
+
+11.1 THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE.
+
+11.2 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, QUANTUM SUITE ORG AND ITS CONTRIBUTORS, MAINTAINERS, AGENTS AND DISTRIBUTORS DISCLAIM ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, QUIET ENJOYMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE OF TRADE.
+
+11.3 WITHOUT LIMITING THE FOREGOING, QUANTUM SUITE ORG DOES NOT WARRANT THAT:
+
+(a) THE SOFTWARE WILL MEET YOUR REQUIREMENTS;
+
+(b) THE SOFTWARE WILL OPERATE WITHOUT INTERRUPTION, ERROR, OR DEFECT;
+
+(c) ANY DATA STORED BY THE SOFTWARE WILL BE PRESERVED, BACKED UP OR RECOVERABLE;
+
+(d) THE ENCRYPTION OR SECURITY FEATURES OF THE SOFTWARE WILL PREVENT UNAUTHORISED ACCESS TO YOUR DATA;
+
+(e) THE ASSISTANT, THE MODEL, OR ANY OUTPUT THEY GENERATE WILL BE ACCURATE, COMPLETE, LAWFUL, OR SUITABLE FOR ANY PURPOSE;
+
+(f) ANY REMINDER WILL BE DISPLAYED AT THE SCHEDULED TIME; OR
+
+(g) THE SOFTWARE IS FREE OF VIRUSES, MALWARE, OR OTHER HARMFUL COMPONENTS.
+
+11.4 SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES. TO THE EXTENT THAT ANY WARRANTY CANNOT BE EXCLUDED UNDER APPLICABLE LAW, THE DURATION OF THAT WARRANTY IS LIMITED TO THE SHORTEST PERIOD PERMITTED, AND THE REMEDIES ARE LIMITED TO THE REPAIR, REPLACEMENT OR REFUND OF THE SOFTWARE, AT QUANTUM SUITE ORG'S OPTION, WHERE SUCH REMEDIES ARE PERMITTED BY LAW.
+
+11.5 YOUR STATUTORY RIGHTS, IF ANY, ARE NOT AFFECTED BY THIS SECTION 11 TO THE EXTENT THAT THOSE RIGHTS CANNOT LAWFULLY BE WAIVED OR LIMITED.
+
+SECTION 12. LIMITATION OF LIABILITY
+
+12.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL QUANTUM SUITE ORG, ITS CONTRIBUTORS, MAINTAINERS, AGENTS OR DISTRIBUTORS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, DATA USE, GOODWILL, BUSINESS OPPORTUNITY, OR ANTICIPATED SAVINGS, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, EVEN IF QUANTUM SUITE ORG HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+12.2 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE TOTAL AGGREGATE LIABILITY OF QUANTUM SUITE ORG AND ITS CONTRIBUTORS, MAINTAINERS, AGENTS AND DISTRIBUTORS ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE, WHETHER IN CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE, SHALL NOT EXCEED THE GREATER OF (A) ONE HUNDRED UNITED STATES DOLLARS (US$100), OR (B) THE AMOUNT YOU ACTUALLY PAID TO QUANTUM SUITE ORG FOR THE SOFTWARE IN THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM. YOU ACKNOWLEDGE THAT THE SOFTWARE IS PROVIDED FREE OF CHARGE, AND THAT THE AMOUNT IN (A) IS THE PRIMARY MEASURE OF LIABILITY.
+
+12.3 THE LIMITATIONS IN SECTIONS 12.1 AND 12.2 APPLY EVEN IF ANY LIMITED REMEDY PROVIDED IN THIS AGREEMENT FAILS OF ITS ESSENTIAL PURPOSE.
+
+12.4 NOTHING IN THIS AGREEMENT LIMITS OR EXCLUDES LIABILITY FOR DEATH OR PERSONAL INJURY CAUSED BY NEGLIGENCE, FOR FRAUD OR FRAUDULENT MISREPRESENTATION, OR FOR ANY OTHER LIABILITY THAT CANNOT BE LIMITED OR EXCLUDED UNDER APPLICABLE LAW.
+
+12.5 THE PARTIES AGREE THAT THE ALLOCATION OF RISK IN THIS SECTION 12 IS AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN THEM, AND THAT THE SOFTWARE WOULD NOT BE PROVIDED WITHOUT THESE LIMITATIONS.
+
+SECTION 13. EXPORT CONTROLS AND SANCTIONS
+
+13.1 You acknowledge that the Software, including its encryption functionality, may be subject to export control and import restrictions under the laws of the United States, the European Union, the United Kingdom, and other jurisdictions.
+
+13.2 You agree that you will not export, re-export, transfer or otherwise make the Software available, directly or indirectly, to any person, entity or destination in violation of such laws, including any country, territory or person subject to comprehensive sanctions, or any person on a restricted party list maintained by a relevant government.
+
+13.3 You represent and warrant that you are not located in, under the control of, or a national or resident of any such country or territory, and that you are not listed on any such restricted party list.
+
+SECTION 14. INDEMNIFICATION
+
+14.1 No indemnity is required from users under this Agreement. Quantum Suite does not ask any user to defend or compensate it for claims arising from the use of the Software, and nothing in this Agreement creates such an obligation.
+
+SECTION 15. TERM AND TERMINATION
+
+15.1 This Agreement becomes effective when you first accept it, or when you first install, run or otherwise use the Software, whichever occurs first, and continues until terminated in accordance with this Section 15.
+
+15.2 You may terminate this Agreement at any time by ceasing to use the Software and uninstalling it from all of your devices. Termination does not delete the Vault data directory unless you choose to delete it.
+
+15.3 Quantum Suite Org may terminate this Agreement and your licence immediately, without notice, if you breach any of its terms, in particular Section 4.
+
+15.4 Upon termination, you must immediately cease all use of the Software and destroy all copies of the compiled Software in your possession or control, except that you may retain User Content stored in your own Vault.
+
+15.5 Sections 1, 2, 3.6 to 3.10, 7.1, 7.3, 7.4, 7.6, 7.7, 8.5, 8.6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 and 20 survive any termination of this Agreement, together with any other provisions that by their nature are intended to survive.
+
+SECTION 16. CONFIDENTIALITY OF PRE-RELEASE SOFTWARE
+
+16.1 If Quantum Suite Org provides you with any version of the Software that is marked as a pre-release, beta, preview, alpha, or release candidate, that version and all information about it that is not publicly available constitutes confidential information. You shall not disclose such information to any third party without prior written consent, and you shall use it solely for the purpose of evaluating it and providing feedback to Quantum Suite Org.
+
+16.2 Confidentiality obligations under this Section 16 do not apply to information that is or becomes publicly available through no fault of yours, that you lawfully obtained from a third party without restriction, or that you are required to disclose by law, provided that you give Quantum Suite Org reasonable notice of such requirement where lawful to do so.
+
+16.3 Feedback that you voluntarily provide regarding the Software may be used by Quantum Suite Org without obligation or compensation to you, and you grant Quantum Suite Org a non-exclusive, perpetual, royalty-free licence to use such feedback for any purpose.
+
+SECTION 17. GOVERNING LAW AND DISPUTE RESOLUTION
+
+17.1 GOVERNING LAW. This Agreement, and any dispute or claim arising out of or relating to it or to the Software, is governed by and construed in accordance with the laws of the Republic of India, including the Indian Contract Act, 1872, the Information Technology Act, 2000, the Copyright Act, 1957, and the Consumer Protection Act, 2019, without giving effect to any choice-of-law or conflict-of-law rules that would require the application of the laws of any other jurisdiction. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.
+
+17.2 INFORMAL RESOLUTION. Before commencing any formal proceeding, the party raising a dispute shall give written notice to the other party describing the dispute in reasonable detail and the relief sought. The parties shall attempt in good faith to resolve the dispute informally for a period of thirty (30) days from the date of that notice.
+
+17.3 ARBITRATION. If a dispute is not resolved under Section 17.2, the dispute shall be finally resolved by arbitration in accordance with the Arbitration and Conciliation Act, 1996 (as amended, including by the Arbitration and Conciliation (Amendment) Act, 2015 and 2019) of the Republic of India. The seat of arbitration shall be Bangalore, India. The language of the arbitration shall be English. The tribunal shall consist of one (1) arbitrator, appointed by mutual agreement of the parties within thirty (30) days of a request for arbitration, failing which the arbitrator shall be appointed in accordance with the Arbitration and Conciliation Act, 1996. The award shall be final and binding, and judgment on the award may be entered in any court of competent jurisdiction in India. Subject to the foregoing, the courts at Bangalore, India shall have exclusive jurisdiction over any matter that is not arbitrable or that requires court assistance in support of the arbitration.
+
+17.4 CLASS ACTION WAIVER. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, YOU AND QUANTUM SUITE AGREE THAT ANY DISPUTE SHALL BE RESOLVED ONLY ON AN INDIVIDUAL BASIS AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED OR REPRESENTATIVE PROCEEDING. NOTHING IN THIS SECTION 17.4 LIMITS ANY RIGHT OF ACTION THAT A CONSUMER MAY HAVE UNDER THE CONSUMER PROTECTION ACT, 2019, INCLUDING THE RIGHT TO BRING A COMPLAINT BEFORE A CONSUMER COMMISSION.
+
+17.5 EXCEPTIONS. Nothing in this Section 17 prevents either party from seeking urgent interim or injunctive relief from a court of competent jurisdiction under the Code of Civil Procedure, 1908, or the Specific Relief Act, 1963, to prevent actual or threatened infringement of its copyright or other intellectual property rights, or to protect confidential information, pending the outcome of arbitration. Nothing in this Section 17 prevents you from bringing a claim before a District Consumer Disputes Redressal Commission, a State Consumer Disputes Redressal Commission or the National Consumer Disputes Redressal Commission, as applicable, or in a small claims forum where one is available to you.
+
+17.6 STATUTORY CONSUMER RIGHTS. If you are a "consumer" within the meaning of the Consumer Protection Act, 2019 of India, you have the rights conferred on you by that Act and by any other mandatory consumer protection law of India. Nothing in this Agreement affects those rights, and where any provision of this Agreement conflicts with such mandatory rights, the mandatory rights prevail to the extent of the conflict. Where the Software is distributed free of charge, the Consumer Protection Act, 2019 may nonetheless apply to the extent that the Act applies to the relationship between you and Quantum Suite, and this Agreement does not purport to exclude any right that the Act does not permit to be excluded.
+
+SECTION 18. GENERAL PROVISIONS
+
+18.1 ENTIRE AGREEMENT. This Agreement, together with the MIT License in respect of the source code as stated in Section 1.4, the Privacy Policy described in Section 10, and any separate written agreement signed by both parties, constitutes the entire agreement between you and Quantum Suite Org regarding the Software, and supersedes all prior or contemporaneous understandings, proposals, representations and agreements, whether written or oral, relating to its subject matter.
+
+18.2 AMENDMENT. Quantum Suite Org may amend this Agreement from time to time by publishing a revised version with the Software or in the public repository. Material amendments will be identified by an updated version number and effective date. Your continued use of the Software after the effective date of an amendment constitutes your acceptance of the amended Agreement. If you do not accept an amendment, you must stop using the Software and uninstall it. Amendments do not apply retroactively to disputes that arose before the effective date of the amendment.
+
+18.3 SEVERABILITY. If any provision of this Agreement is held to be invalid, illegal or unenforceable by a court or arbitral tribunal of competent jurisdiction, that provision shall be enforced to the maximum extent permissible so as to give effect to the intent of the parties, and the remaining provisions shall continue in full force and effect.
+
+18.4 WAIVER. No failure or delay by either party in exercising any right under this Agreement operates as a waiver of that right. A waiver is effective only if it is in writing and signed by the waiving party. A waiver of any breach does not constitute a waiver of any subsequent breach.
+
+18.5 ASSIGNMENT. You may not assign, transfer or delegate this Agreement or any of your rights or obligations under it, whether by operation of law, merger, change of control or otherwise, without the prior written consent of Quantum Suite Org. Any attempted assignment in breach of this Section 18.5 is void. Quantum Suite Org may assign this Agreement without restriction, including to any successor who takes over the publication of the Software.
+
+18.6 FORCE MAJEURE. Neither party is liable for any failure or delay in performance caused by events beyond its reasonable control, including acts of God, natural disasters, war, terrorism, civil disturbance, labour disputes, governmental action, pandemics, failures of public utilities or internet infrastructure, or failures of third-party services, including model repositories, code hosting services, package managers and operating system vendors.
+
+18.7 NO AGENCY. Nothing in this Agreement creates a relationship of partnership, joint venture, agency, fiduciary duty or employment between the parties, and neither party has authority to bind the other.
+
+18.8 THIRD-PARTY BENEFICIARIES. This Agreement does not confer any right or remedy on any person other than you and Quantum Suite Org, except that the contributors, maintainers, agents and distributors described in Sections 11, 12 and 14 are intended third-party beneficiaries of those Sections.
+
+18.9 LANGUAGE. This Agreement is written in English. Any translation is provided for convenience only, and the English version prevails in the event of any inconsistency.
+
+18.10 HEADINGS. Section headings are for convenience only and do not affect the interpretation of this Agreement.
+
+18.11 INTERPRETATION. The words "including" and "include" are deemed to be followed by "without limitation". References to a statute or regulation include any amendment or replacement of it. This Agreement shall not be construed against either party on the ground that that party drafted it.
+
+18.12 COMPLIANCE WITH LAW. Each party shall comply with all laws and regulations applicable to its performance under this Agreement.
+
+18.13 ELECTRONIC ACCEPTANCE. You agree that your acceptance of this Agreement by clicking an acceptance button, by checking a box, by installing the Software, or by otherwise using the Software constitutes your electronic signature and your agreement to be bound by this Agreement, with the same legal effect as a handwritten signature. You agree that a record of such acceptance may be kept by you and that you can print or save a copy of this Agreement at any time from the installer or from the public repository.
+
+18.14 NOTICE OF INFRINGEMENT. If you believe that content made available through the Software infringes your intellectual property rights, you may notify Quantum Suite Org through the contact method described in Section 19. Your notice should identify the material, explain why you believe it is infringing, and include your contact information.
+
+18.15 SURVIVAL. The provisions of this Agreement that by their nature are intended to survive termination or expiry shall survive, including without limitation those listed in Section 15.5.
+
+SECTION 19. NOTICES AND CONTACT
+
+19.1 NOTICES TO QUANTUM SUITE ORG. Notices under this Agreement must be sent in writing to the contact address published in the public repository identified in Section 1.4, or to such other address as Quantum Suite Org may designate by publishing an updated notice. For general questions, bug reports and feature requests, you may use the public issue tracker of the repository. Notices of legal claims must be sent by a method that provides evidence of delivery.
+
+19.2 NOTICES TO YOU. Quantum Suite Org may give you notices under this Agreement by publishing them in the public repository, by including them in an Update, by displaying them within the Software, or by sending them to any email address you have provided to Quantum Suite Org. Notices published in the public repository or displayed within the Software are effective on publication or display.
+
+19.3 SUPPORT. Quantum Suite Org may, at its discretion and without any obligation, provide support through the public issue tracker of the repository. Support requests are answered on a best-efforts basis with no guaranteed response time.
+
+SECTION 20. ACCEPTANCE
+
+20.1 BY SELECTING "I ACCEPT" IN THE INSTALLER, OR BY INSTALLING, RUNNING OR OTHERWISE USING THE SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTOOD THIS AGREEMENT, THAT YOU AGREE TO BE BOUND BY ITS TERMS, THAT YOU ARE OF LEGAL AGE TO ENTER INTO A BINDING CONTRACT IN YOUR JURISDICTION, AND THAT YOU HAVE THE AUTHORITY TO ACCEPT THIS AGREEMENT ON YOUR OWN BEHALF OR ON BEHALF OF THE ORGANISATION YOU REPRESENT.
+
+20.2 IF YOU DO NOT AGREE TO THIS AGREEMENT, SELECT "I DO NOT ACCEPT" IN THE INSTALLER, DO NOT INSTALL OR USE THE SOFTWARE, AND DELETE ALL COPIES IN YOUR POSSESSION.
+
+20.3 THE MASTER PASSWORD, THE LOCAL STORAGE OF YOUR USER CONTENT, AND THE LIMITS ON WARRANTY AND LIABILITY SET OUT IN SECTIONS 7, 11 AND 12 ARE MATERIAL TERMS OF THIS AGREEMENT. PLEASE READ THEM CAREFULLY.
+
+--- END OF END USER LICENSE AGREEMENT ---

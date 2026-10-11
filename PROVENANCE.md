@@ -73,9 +73,11 @@ All runtime OS APIs are provided by the target platform (Windows 10/11).
 - The `pyproject.toml` `authors` field identifies the project maintainer
   (Quantum Suite Org) as a project identity, not as a copyright assertion.
 
-- The `LICENSE` file uses MIT license terms. The copyright holder line has
-  been intentionally left as a project identification notice rather than an
-  ownership assertion, given the AI-generated nature of the codebase.
+- The `LICENSE` file uses MIT license terms with the notice `Copyright (c) 2026 Quantum Suite`.
+  The project claims copyright in the software as a whole. This claim is made
+  as a statement of ownership and attribution, in the same way as an MIT notice.
+  It does not depend on an enforcement position, and the project does not
+  intend to bring legal action against users who follow the licence.
 
 - No trademarks are claimed or registered. "Quantum Suite" and "Quantum Vault"
   are project names used for identification purposes only.
@@ -89,10 +91,12 @@ All runtime OS APIs are provided by the target platform (Windows 10/11).
 
 The following questions are flagged for explicit human/legal decision:
 
-1. **Copyright ownership**: Who, if anyone, holds copyright in the
-   AI-generated source code? This depends on applicable jurisdiction,
-   the nature of human direction provided, and evolving legal standards.
-   This repository does not assert an answer.
+1. **Copyright ownership**: The project claims copyright through the
+   LICENSE notice. Whether copyright subsists in AI-generated source code
+   depends on applicable jurisdiction (in India, the Copyright Act, 1957
+   protects works with human authorship) and on the nature of the human
+   direction provided. This is an open legal question. It has not been
+   reviewed by a lawyer.
 
 2. **Contributor agreements**: If external contributors submit patches,
    a contributor license agreement (CLA) or developer certificate of origin

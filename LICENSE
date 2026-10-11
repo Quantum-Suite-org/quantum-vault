@@ -1,15 +1,6 @@
 MIT License
 
-Project: Quantum Vault
-Maintained by: Quantum Suite Org (https://github.com/quantum-suite-org)
-
-NOTE ON COPYRIGHT: Quantum Vault was developed with substantial AI assistance
-(Claude, Anthropic). No individual human author has been identified as the
-copyright holder of the generated source code at this time. This notice does
-not assert copyright ownership on behalf of any party. The project is
-distributed under the MIT License terms below. Any person or organisation
-wishing to assert copyright ownership over their specific contributions should
-document those contributions separately.
+Copyright (c) 2026 Quantum Suite
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,10 +22,7 @@ SOFTWARE.
 
 ---
 
-NOTE ON QUANTUM SUITE ECOSYSTEM LICENSING
-
-Quantum Vault is licensed independently under the MIT License above.
-It does not depend on, include, or inherit the licensing of any other
-Quantum Suite component. Future Quantum Suite ecosystem components may be
-released under different licenses; those decisions do not affect
-Quantum Vault's MIT license.
+Quantum Vault is licensed under the MIT License above. The MIT License
+covers the source code. The names "Quantum Vault", "Quantum Suite" and
+"Quantum Suite Org", and the associated logos and artwork, are not licensed
+under the MIT License; see EULA.txt for the terms that apply to them.

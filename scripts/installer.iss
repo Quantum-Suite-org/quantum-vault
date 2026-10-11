@@ -1,9 +1,9 @@
-; Quantum Vault - Inno Setup Installer Script
+﻿; Quantum Vault - Inno Setup Installer Script
 ; Version: 0.1.1
 ; Build with: iscc scripts\installer.iss
 
 #define AppName "Quantum Vault"
-#define AppVersion "0.1.1"
+#define AppVersion "0.1.2"
 #define AppPublisher "Quantum Suite Org"
 #define AppURL "https://github.com/quantum-suite-org/quantum-vault"
 #define AppExeName "QuantumVault.exe"
@@ -24,6 +24,7 @@ OutputBaseFilename=QuantumVault-{#AppVersion}-Setup
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
+LicenseFile=..\EULA.txt
 PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
@@ -51,6 +52,7 @@ Source: "..\build\bin\qvault_core.pdb"; DestDir: "{app}"; Flags: ignoreversion s
 ; Documentation
 Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\EULA.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\PRIVACY.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]

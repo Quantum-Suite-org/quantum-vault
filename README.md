@@ -6,13 +6,13 @@
 winget install Quantum-suite-org.QuantumVault
 ```
 
-Or download `QuantumVault-0.1.1-Setup.exe` from the [latest release](https://github.com/Quantum-Suite-org/quantum-vault/releases/latest).
+Or download `QuantumVault-0.1.2-Setup.exe` from the [latest release](https://github.com/Quantum-Suite-org/quantum-vault/releases/latest).
 
 Requires Windows 10/11 (x64) and the Microsoft Edge WebView2 Runtime. Without WebView2 the app opens its classic window instead.
 
 **Lightweight secure local note and snippet manager — first Quantum Suite application.**
 
-> v0.1.1 · Windows 10/11 · Offline-first · No accounts · MIT License
+> v0.1.2 · Windows 10/11 · Offline-first · No accounts · MIT License
 
 ---
 
@@ -24,7 +24,7 @@ Quantum Vault is a native Windows desktop application for storing and searching 
 - **Snippets** — code fragments with language tagging and one-click copy
 - **Commands** — shell commands you want to remember and copy quickly
 
-Everything lives on your machine. No cloud, no accounts, no telemetry.
+Your notes, snippets and commands are stored on your machine. Quantum Vault has no cloud sync, no accounts and no telemetry. It makes network requests only for the optional features described under Privacy & Security.
 
 ---
 
@@ -32,11 +32,11 @@ Everything lives on your machine. No cloud, no accounts, no telemetry.
 
 ### WinGet (recommended, once published)
 ```powershell
-winget install QuantumSuiteOrg.QuantumVault
+winget install Quantum-suite-org.QuantumVault
 ```
 
 ### Manual
-1. Download `QuantumVault-0.1.1-Setup.exe` from Releases
+1. Download `QuantumVault-0.1.2-Setup.exe` from Releases
 2. Run the installer
 3. Launch **Quantum Vault** from Start Menu
 
@@ -221,8 +221,8 @@ See [docs/architecture.md](docs/architecture.md).
 
 ## Privacy & Security
 
-- **No telemetry.** No data is ever sent over the network.
-- **No accounts.** No registration, no login, no online component.
+- **No telemetry.** Quantum Vault sends no analytics or usage data. Vault contents are never sent automatically. Network requests happen only when you use features that need them: downloading the optional assistant model from Hugging Face, the assistant's web search and page-fetch tools (which send the query or URL to the websites involved), and checks made by Windows, WebView2 or winget. Avoid putting secrets into assistant prompts.
+- **No accounts.** No registration or login is required.
 - **Local encryption.** Notes use AES-256-CBC with PBKDF2-SHA256 (200,000 iterations).
 - **Key never stored.** Your notes password is never written to disk.
 - **Logs contain no content.** Only metadata (timestamps, entry counts) is logged.
@@ -235,9 +235,7 @@ See [PRIVACY.md](PRIVACY.md) for full details.
 
 MIT — see [LICENSE](LICENSE).
 
-Quantum Vault is distributed under the MIT License. No copyright ownership
-is asserted on behalf of any party at this time; see [PROVENANCE.md](PROVENANCE.md)
-for the full provenance record.
+Quantum Vault is distributed under the MIT License. The MIT License covers the source code only. It does not grant rights in the names or branding. Copyright in the software, its documentation and artwork is claimed by Quantum Suite to the extent it subsists under applicable law. See [EULA.txt](EULA.txt) for the terms that apply to the compiled software and branding, and [PROVENANCE.md](PROVENANCE.md) for the provenance record.
 
 Quantum Vault is licensed independently from the broader Quantum Suite ecosystem.
 
