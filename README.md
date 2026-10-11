@@ -1,4 +1,14 @@
-# Quantum Vault
+﻿# Quantum Vault
+
+## Install
+
+```powershell
+winget install Quantum-suite-org.QuantumVault
+```
+
+Or download `QuantumVault-0.1.0-Setup.exe` from the [latest release](https://github.com/Quantum-Suite-org/quantum-vault/releases/latest).
+
+Requires Windows 10/11 (x64) and the Microsoft Edge WebView2 Runtime. Without WebView2 the app opens its classic window instead.
 
 **Lightweight secure local note and snippet manager — first Quantum Suite application.**
 
@@ -230,3 +240,4 @@ is asserted on behalf of any party at this time; see [PROVENANCE.md](PROVENANCE.
 for the full provenance record.
 
 Quantum Vault is licensed independently from the broader Quantum Suite ecosystem.
+
