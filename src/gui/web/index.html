@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://qv.local; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Vault</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <div class="brand">
+      <div class="logo">⬡</div>
+      <div><div class="brand-name">Quantum Vault</div><div class="brand-sub">offline · encrypted</div></div>
+    </div>
+    <nav class="nav">
+      <button class="nav-btn" data-page="dashboard"><span class="ico">▦</span>Dashboard</button>
+      <button class="nav-btn" data-page="vault"><span class="ico">🔒</span>Vault</button>
+      <button class="nav-btn" data-page="assistant"><span class="ico">✦</span>Assistant</button>
+      <button class="nav-btn" data-page="browser"><span class="ico">◎</span>Browser</button>
+      <button class="nav-btn" data-page="security"><span class="ico">⛨</span>Security</button>
+      <button class="nav-btn" data-page="settings"><span class="ico">⚙</span>Settings</button>
+    </nav>
+    <div class="side-foot" id="engine">Starting…</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- DASHBOARD -->
+    <section class="page" id="page-dashboard">
+      <header class="page-head">
+        <div><h1>Main Dashboard</h1><p class="muted">Your vault is encrypted and stays on this PC</p></div>
+        <button class="btn primary" data-action="new">+ Add New</button>
+      </header>
+      <div class="metrics">
+        <button class="card metric" data-go="vault" data-filter="all"><div class="m-ico cyan">🔐</div><div class="m-val" id="m-total">0</div><div class="m-lbl">Total entries</div></button>
+        <button class="card metric" data-go="vault" data-filter="notes"><div class="m-ico purple">✎</div><div class="m-val" id="m-notes">0</div><div class="m-lbl">Notes</div></button>
+        <button class="card metric" data-go="vault" data-filter="snippets"><div class="m-ico green">{ }</div><div class="m-val" id="m-snippets">0</div><div class="m-lbl">Snippets</div></button>
+        <button class="card metric" data-go="vault" data-filter="commands"><div class="m-ico amber">›_</div><div class="m-val" id="m-commands">0</div><div class="m-lbl">Commands</div></button>
+      </div>
+      <div class="dash-lower">
+        <section class="card">
+          <h3>Recent Activity</h3>
+          <div id="recent" class="list"></div>
+        </section>
+        <section class="card">
+          <h3>Quick Actions</h3>
+          <button class="action" data-action="new"><div><b>Add New</b><small>Create a note, snippet or command</small></div><span>→</span></button>
+          <button class="action" data-go="security"><div><b>Security Center</b><small>View vault health and alerts</small></div><span>→</span></button>
+          <button class="action" data-go="settings"><div><b>Settings</b><small>Backup, export and password</small></div><span>→</span></button>
+        </section>
+      </div>
+    </section>
+
+    <!-- VAULT -->
+    <section class="page" id="page-vault">
+      <div class="vault-layout">
+        <section class="card vault-list-card">
+          <div class="chips" id="chips">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="notes">Notes</button>
+            <button class="chip" data-filter="snippets">Snippets</button>
+            <button class="chip" data-filter="commands">Commands</button>
+            <button class="chip" data-filter="favorites">★</button>
+          </div>
+          <input id="vault-search" class="input" placeholder="Search title, tags, content…  (Ctrl+F)">
+          <div id="vault-list" class="list grow"></div>
+          <button class="btn primary block" data-action="new">+ New Entry</button>
+        </section>
+
+        <section class="card editor-card" id="editor">
+          <div class="empty" id="editor-empty">
+            <div class="m-ico cyan big">🛡</div>
+            <h2>Select an entry</h2>
+            <p class="muted">Choose an item from the list or create a new entry.</p>
+          </div>
+          <div class="editor hidden" id="editor-body">
+            <div class="editor-bar">
+              <span class="badge" id="ed-type">NOTE</span>
+              <span class="saved hidden" id="ed-saved">● Saved</span>
+              <div class="grow"></div>
+              <button class="btn ghost sm" id="ed-copy">Copy</button>
+              <button class="btn ghost sm" id="ed-fav">☆</button>
+              <button class="btn ghost sm" id="ed-dup">Duplicate</button>
+              <button class="btn primary sm" id="ed-save">Save</button>
+              <button class="btn danger sm" id="ed-del">Delete</button>
+            </div>
+            <input id="ed-title" class="title-input" placeholder="Untitled">
+            <div class="meta">
+              <label class="field"><span>TAGS</span><input id="ed-tags" class="input" placeholder="comma, separated"></label>
+              <label class="field"><span>DESCRIPTION</span><input id="ed-desc" class="input" placeholder="short description"></label>
+              <label class="field"><span>LANGUAGE</span><input id="ed-lang" class="input" placeholder="e.g. python"></label>
+              <label class="field dpapi" id="ed-dpapi-wrap"><span>WINDOWS LOCK</span>
+                <label class="check"><input type="checkbox" id="ed-dpapi"> Bind to my Windows account</label></label>
+            </div>
+            <textarea id="ed-content" class="content" spellcheck="false" placeholder="Write here…"></textarea>
+            <div class="editor-foot"><span id="ed-updated" class="muted"></span><span id="ed-count" class="muted"></span></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ASSISTANT -->
+    <section class="page" id="page-assistant">
+      <div class="two-col">
+        <section class="card">
+          <h3>Reminders</h3>
+          <p class="muted sm">Click to mark done · saved on this PC</p>
+          <div id="reminders" class="list grow"></div>
+          <button class="btn ghost sm" id="clear-done">Clear completed</button>
+        </section>
+        <section class="card chat-card">
+          <h3>Assistant</h3>
+          <div class="model-bar"><span id="model-state">Checking model…</span><button class="btn ghost sm" id="model-dl">Download model</button></div>
+          <div id="chat" class="chat grow"></div>
+          <div class="chat-input">
+            <input id="chat-in" class="input" placeholder="remind me to call mom tomorrow at 5pm">
+            <button class="btn primary" id="chat-send">Send</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- BROWSER -->
+    <section class="page" id="page-browser">
+      <div class="addr-bar">
+        <input id="addr" class="input grow" placeholder="Enter a web address or search…">
+        <button class="btn primary" id="addr-go">Go</button>
+        <button class="btn ghost" id="addr-ext">Open externally</button>
+      </div>
+      <p class="muted sm" id="browser-engine"></p>
+      <section class="card page-text-card"><pre id="page-text" class="page-text">Type an address above and press Go.</pre></section>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="page" id="page-security">
+      <header class="page-head"><div><h1>Security Center</h1><p class="muted">Vault health and encryption status</p></div></header>
+      <div id="security" class="sec-list"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="page" id="page-settings">
+      <header class="page-head"><div><h1>Settings</h1><p class="muted">Vault, backup and password</p></div></header>
+      <div class="settings">
+        <section class="card row-card"><div><b>Master password</b><small>Protects notes. It is never stored.</small></div><button class="btn ghost" id="set-pw">Change password</button></section>
+        <section class="card row-card"><div><b>Export</b><small>Save all entries to a JSON file.</small></div><button class="btn ghost" id="set-export">Export…</button></section>
+        <section class="card row-card"><div><b>Import</b><small>Merge entries from a JSON file.</small></div><button class="btn ghost" id="set-import">Import…</button></section>
+        <section class="card row-card"><div><b>Backup</b><small>Create a backup copy of the vault now.</small></div><button class="btn ghost" id="set-backup">Backup now</button></section>
+        <section class="card"><b>About</b><p class="muted" id="about"></p></section>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Modal (generic form) -->
+<div class="modal hidden" id="modal">
+  <div class="dialog">
+    <h3 id="m-title"></h3>
+    <div id="m-body"></div>
+    <div class="row end">
+      <button class="btn ghost" id="m-cancel">Cancel</button>
+      <button class="btn primary" id="m-ok">OK</button>
+    </div>
+  </div>
+</div>
+
+<div id="boot-error" class="boot-error hidden"></div>
+<div class="toast hidden" id="toast"></div>
+
+<script src="boot.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+

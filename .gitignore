@@ -1,0 +1,35 @@
+# Build outputs
+build/
+dist/
+
+# .NET
+src/gui/bin/
+src/gui/obj/
+*.user
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+*.egg
+dist/
+*.whl
+
+# VS
+.vs/
+*.suo
+*.user
+*.aps
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.bak
+
+# OS
+Thumbs.db
+.DS_Store

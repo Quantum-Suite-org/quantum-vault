@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "qvault"
+version         = "0.1.0"
+description     = "Quantum Vault CLI - local secure note and snippet manager"
+readme          = "README_CLI.md"
+license         = { text = "MIT" }
+requires-python = ">=3.8"
+authors         = [{ name = "Quantum Suite Org" }]
+keywords        = ["notes", "snippets", "cli", "vault", "productivity"]
+classifiers     = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+]
+# Zero mandatory third-party dependencies.
+# ctypes is stdlib. clip is a Windows built-in.
+dependencies = []
+
+[project.scripts]
+qvault = "qvault.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-timeout"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qvault*"]
+
+[tool.setuptools.package-data]
+qvault = ["*.dll"]

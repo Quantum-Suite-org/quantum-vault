@@ -1,0 +1,196 @@
+﻿<mah:MetroWindow
+    x:Class="QuantumVault.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:QuantumVault"
+    Title="Quantum Vault"
+    Width="1400" Height="860"
+    MinWidth="1100" MinHeight="700"
+    WindowStartupLocation="CenterScreen"
+    GlowBrush="{StaticResource QV.Brush.Cyan}"
+    NonActiveGlowBrush="{StaticResource QV.Brush.BorderSubtle}"
+    BorderThickness="1"
+    TitleBarHeight="44"
+    ShowIconOnTitleBar="False"
+    ShowTitleBar="True"
+    Background="{StaticResource QV.Brush.BgBase}"
+    Foreground="{StaticResource QV.Brush.TextPrimary}"
+    FontFamily="{StaticResource QV.Font.UI}"
+    ResizeMode="CanResizeWithGrip">
+
+    <mah:MetroWindow.TitleTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="8,0,0,0">
+                <Border Width="24" Height="24" Background="{StaticResource QV.Brush.CyanGlow}"
+                        CornerRadius="5" Margin="0,0,8,0">
+                    <TextBlock Text="QV" FontSize="9" FontWeight="Bold"
+                               Foreground="{StaticResource QV.Brush.CyanBright}"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <TextBlock Text="QUANTUM VAULT" FontSize="11" FontWeight="SemiBold"
+                           Foreground="{StaticResource QV.Brush.TextPrimary}"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </mah:MetroWindow.TitleTemplate>
+
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="NotifBtn_Click" ToolTip="Notifications" Padding="8,0">
+                <iconPacks:PackIconMaterial Kind="BellOutline" Width="15" Height="15"
+                    Foreground="{StaticResource QV.Brush.TextSecondary}"/>
+            </Button>
+            <Button Click="ProfileBtn_Click" ToolTip="Account" Padding="8,0">
+                <iconPacks:PackIconMaterial Kind="AccountCircleOutline" Width="15" Height="15"
+                    Foreground="{StaticResource QV.Brush.TextSecondary}"/>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+
+    <mah:MetroWindow.InputBindings>
+        <KeyBinding Key="N"        Modifiers="Ctrl" Command="{Binding NewEntryCommand}"/>
+        <KeyBinding Key="F"        Modifiers="Ctrl" Command="{Binding FocusSearchCommand}"/>
+        <KeyBinding Key="S"        Modifiers="Ctrl" Command="{Binding SaveCommand}"/>
+        <KeyBinding Key="Delete"   Modifiers="Ctrl" Command="{Binding DeleteCommand}"/>
+        <KeyBinding Key="D"        Modifiers="Ctrl" Command="{Binding DuplicateCommand}"/>
+        <KeyBinding Key="OemComma" Modifiers="Ctrl" Command="{Binding OpenSettingsCommand}"/>
+    </mah:MetroWindow.InputBindings>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="56"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Icon strip -->
+        <Border Grid.Column="0"
+                Background="{StaticResource QV.Brush.SidebarStrip}"
+                BorderBrush="{StaticResource QV.Brush.BorderSubtle}"
+                BorderThickness="0,0,1,0">
+            <DockPanel LastChildFill="False">
+                <Border DockPanel.Dock="Top" Height="52" HorizontalAlignment="Center">
+                    <Border Width="30" Height="30" CornerRadius="7"
+                            Background="{StaticResource QV.Brush.CyanGlow}"
+                            VerticalAlignment="Center">
+                        <TextBlock Text="QV" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource QV.Brush.CyanBright}"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </Border>
+                <StackPanel DockPanel.Dock="Top" Margin="0,4,0,0">
+                    <local:NavIconButton x:Name="IcoDash"     Tag="dashboard" NavIcon="ViewDashboard"  Click="NavIcon_Click"/>
+                    <local:NavIconButton x:Name="IcoVault"    Tag="vault"     NavIcon="Shield"         Click="NavIcon_Click"/>
+                    <local:NavIconButton x:Name="IcoNotes"    Tag="notes"     NavIcon="NoteTextOutline" Click="NavIcon_Click"/>
+                    <local:NavIconButton x:Name="IcoSnippets" Tag="snippets"  NavIcon="CodeBraces"     Click="NavIcon_Click"/>
+                    <local:NavIconButton x:Name="IcoCommands" Tag="commands"  NavIcon="Console"        Click="NavIcon_Click"/>
+                    <local:NavIconButton x:Name="IcoSecurity" Tag="security"  NavIcon="ShieldLockOutline" Click="NavIcon_Click"/>
+                    <local:NavIconButton x:Name="IcoFavorites" Tag="favorites" NavIcon="StarOutline"    Click="NavIcon_Click"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" Margin="0,0,0,6">
+                    <local:NavIconButton x:Name="IcoSettings" Tag="settings"  NavIcon="CogOutline"     Click="NavIcon_Click"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Sidebar labels -->
+        <Border Grid.Column="1"
+                Background="{StaticResource QV.Brush.SidebarBg}"
+                BorderBrush="{StaticResource QV.Brush.BorderSubtle}"
+                BorderThickness="0,0,1,0">
+            <DockPanel LastChildFill="True">
+                <!-- Header -->
+                <Border DockPanel.Dock="Top" Height="52" Padding="16,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="QUANTUM VAULT" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource QV.Brush.Cyan}"/>
+                        <TextBlock Text="v0.1.0 · Secure Local Vault" FontSize="9"
+                                   Foreground="{StaticResource QV.Brush.TextMuted}" Margin="0,1,0,0"/>
+                    </StackPanel>
+                </Border>
+                <Separator DockPanel.Dock="Top" Margin="0"/>
+
+                <!-- Search -->
+                <Border DockPanel.Dock="Top" Padding="10,8">
+                    <Grid>
+                        <TextBox x:Name="TbSearch"
+                                 Style="{StaticResource QV.Style.TextBox}"
+                                 Padding="32,8,10,8" FontSize="12"
+                                 TextChanged="TbSearch_TextChanged"
+                                 KeyDown="TbSearch_KeyDown"/>
+                        <iconPacks:PackIconMaterial Kind="Magnify" Width="13" Height="13"
+                            Foreground="{StaticResource QV.Brush.TextMuted}"
+                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                            Margin="10,0,0,0" IsHitTestVisible="False"/>
+                        <TextBlock x:Name="TbSearchHint" Text="Search... (Ctrl+F)"
+                            Foreground="{StaticResource QV.Brush.TextMuted}" FontSize="12"
+                            IsHitTestVisible="False" VerticalAlignment="Center" Margin="32,0,0,0"/>
+                    </Grid>
+                </Border>
+
+                <!-- Nav -->
+                <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto" Margin="0,0,0,0">
+                    <StackPanel Margin="8,0,8,8">
+                        <TextBlock Text="NAVIGATION" FontSize="9" FontWeight="SemiBold"
+                            Foreground="{StaticResource QV.Brush.TextMuted}" Margin="8,10,0,4"/>
+                        <local:NavLabelButton x:Name="LbDash"     Tag="dashboard" NavIcon="ViewDashboard"    NavLabel="Dashboard"       Click="NavLabel_Click"/>
+                        <local:NavLabelButton x:Name="LbVault"    Tag="vault"     NavIcon="Shield"           NavLabel="Vault"           Click="NavLabel_Click"/>
+
+                        <TextBlock Text="LIBRARY" FontSize="9" FontWeight="SemiBold"
+                            Foreground="{StaticResource QV.Brush.TextMuted}" Margin="8,10,0,4"/>
+                        <local:NavLabelButton x:Name="LbNotes"    Tag="notes"     NavIcon="NoteTextOutline"  NavLabel="Notes"           Click="NavLabel_Click"/>
+                        <local:NavLabelButton x:Name="LbSnippets" Tag="snippets"  NavIcon="CodeBraces"       NavLabel="Snippets"        Click="NavLabel_Click"/>
+                        <local:NavLabelButton x:Name="LbCommands" Tag="commands"  NavIcon="Console"          NavLabel="Commands"        Click="NavLabel_Click"/>
+                        <local:NavLabelButton x:Name="LbFavorites" Tag="favorites" NavIcon="StarOutline"      NavLabel="Favorites"       Click="NavLabel_Click"/>
+                        <local:NavLabelButton x:Name="LbRecent"   Tag="recent"    NavIcon="History"          NavLabel="Recently Edited" Click="NavLabel_Click"/>
+
+                        <TextBlock Text="SECURITY" FontSize="9" FontWeight="SemiBold"
+                            Foreground="{StaticResource QV.Brush.TextMuted}" Margin="8,10,0,4"/>
+                        <local:NavLabelButton x:Name="LbSecurity" Tag="security"  NavIcon="ShieldLockOutline" NavLabel="Security Center" Click="NavLabel_Click"/>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!-- Status bar -->
+                <Border DockPanel.Dock="Bottom"
+                        BorderBrush="{StaticResource QV.Brush.BorderSubtle}"
+                        BorderThickness="0,1,0,0" Padding="14,10">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
+                            <Ellipse Width="6" Height="6" Fill="{StaticResource QV.Brush.Green}"
+                                     VerticalAlignment="Center" Margin="0,0,6,0"/>
+                            <TextBlock Text="AES-256 Encrypted" FontSize="10"
+                                       Foreground="{StaticResource QV.Brush.Green}"/>
+                        </StackPanel>
+                        <TextBlock x:Name="TbStatTotal" FontSize="10"
+                                   Foreground="{StaticResource QV.Brush.TextMuted}"/>
+                        <TextBlock x:Name="TbStatLocked" FontSize="10"
+                                   Foreground="{StaticResource QV.Brush.TextMuted}" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </Border>
+            </DockPanel>
+        </Border>
+
+        <!-- Main content -->
+        <Border Grid.Column="2" Background="{StaticResource QV.Brush.BgBase}">
+            <Grid>
+                <local:DashboardView  x:Name="ViewDashboard"  Visibility="Collapsed"
+                    NewEntryRequested="Dashboard_NewEntry"
+                    NavigateRequested="Dashboard_Navigate"/>
+                <local:VaultView      x:Name="ViewVault"       Visibility="Collapsed"
+                    SaveRequested="Vault_Save"
+                    DeleteRequested="Vault_Delete"
+                    DuplicateRequested="Vault_Duplicate"
+                    NewEntryRequested="Vault_NewEntry"/>
+                <local:SecurityView   x:Name="ViewSecurity"    Visibility="Collapsed"/>
+                <local:SettingsView   x:Name="ViewSettings"    Visibility="Collapsed"
+                    CloseRequested="Settings_Close"/>
+                <local:WelcomeView    x:Name="ViewWelcome"     Visibility="Collapsed"
+                    GetStarted="Welcome_GetStarted"/>
+            </Grid>
+        </Border>
+    </Grid>
+</mah:MetroWindow>
+
+
