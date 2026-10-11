@@ -33,3 +33,11 @@ dist/
 # OS
 Thumbs.db
 .DS_Store
+
+installer-bootstrap/node_modules/
+installer-bootstrap/dist/
+installer-bootstrap/payload/
+installer-bootstrap/renderer/assets/eula.txt
+installer-bootstrap/renderer/assets/logo.jpg
+installer-bootstrap/assets/icon.ico
+winget/

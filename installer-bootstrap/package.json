@@ -1,0 +1,58 @@
+{
+  "name": "quantum-vault-setup",
+  "productName": "Quantum Vault Setup",
+  "version": "0.1.2",
+  "description": "Bootstrapper for Quantum Vault. Shows the installer UI and chains the silent Inno Setup package.",
+  "author": "Quantum Suite",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "prepare-assets": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare.ps1",
+    "build": "npm run prepare-assets && electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "org.quantumsuite.quantumvault.setup",
+    "productName": "Quantum Vault Setup",
+    "copyright": "Copyright (c) 2026 Quantum Suite",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "payload",
+        "to": "payload",
+        "filter": [
+          "QuantumVault-Setup.exe"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator",
+      "artifactName": "QuantumVault-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "QuantumVault-Setup-${version}.exe"
+    }
+  }
+}

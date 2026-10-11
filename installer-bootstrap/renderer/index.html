@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Vault Setup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="scan" aria-hidden="true"></div>
+
+  <header class="titlebar">
+    <div class="drag-region">
+      <img class="mini-logo" src="assets/logo.jpg" alt="" />
+      <span class="product">Quantum Vault <em>Setup</em></span>
+    </div>
+    <div class="win-controls">
+      <button id="btn-min" class="win-btn" aria-label="Minimise" title="Minimise">&#8211;</button>
+      <button id="btn-close" class="win-btn win-close" aria-label="Close" title="Close">&#215;</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <aside class="rail">
+      <div class="rail-logo">
+        <div class="orb">
+          <img src="assets/logo.jpg" alt="Quantum Suite logo" />
+          <span class="ring r1"></span>
+          <span class="ring r2"></span>
+          <span class="ring r3"></span>
+        </div>
+      </div>
+      <ol class="steps" id="steps">
+        <li data-step="welcome" class="active"><span class="dot"></span>Welcome</li>
+        <li data-step="license"><span class="dot"></span>License</li>
+        <li data-step="location"><span class="dot"></span>Location</li>
+        <li data-step="install"><span class="dot"></span>Install</li>
+        <li data-step="done"><span class="dot"></span>Finish</li>
+      </ol>
+      <div class="rail-foot">
+        <span class="ver" id="ver">v0.1.2</span>
+        <span class="by">Quantum Suite</span>
+      </div>
+    </aside>
+
+    <section class="stage">
+      <!-- Welcome -->
+      <div class="screen active" id="screen-welcome">
+        <p class="eyebrow">Welcome to</p>
+        <h1 class="title glitch" data-text="QUANTUM VAULT">QUANTUM VAULT</h1>
+        <p class="lede">Encrypted notes, snippets and commands on your own PC, with a local assistant. This setup installs Quantum Vault and walks you through the license and the install location.</p>
+        <ul class="facts">
+          <li><span class="fact-dot"></span>AES-256 encryption through Windows CNG</li>
+          <li><span class="fact-dot"></span>Local assistant that runs its model on your PC</li>
+          <li><span class="fact-dot"></span>Open source under the MIT License</li>
+        </ul>
+        <div class="actions">
+          <span></span>
+          <button class="btn primary" id="btn-begin">Begin setup</button>
+        </div>
+      </div>
+
+      <!-- License -->
+      <div class="screen" id="screen-license">
+        <p class="eyebrow">Step 2 of 4</p>
+        <h2 class="heading">License agreement</h2>
+        <p class="sub">Read the End User License Agreement. You must accept it to continue.</p>
+        <div class="eula" id="eula-text" tabindex="0" aria-label="End User License Agreement"></div>
+        <label class="accept">
+          <input type="checkbox" id="accept-box" disabled />
+          <span class="box"></span>
+          <span>I have read and accept the terms of the End User License Agreement</span>
+        </label>
+        <p class="hint" id="eula-hint">Scroll to the end of the agreement to enable acceptance.</p>
+        <div class="actions">
+          <button class="btn ghost" data-back="welcome">Back</button>
+          <button class="btn primary" id="btn-accept" disabled>Next</button>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="screen" id="screen-location">
+        <p class="eyebrow">Step 3 of 4</p>
+        <h2 class="heading">Install location</h2>
+        <p class="sub">Choose where Quantum Vault is installed. The default location is recommended.</p>
+        <div class="field">
+          <label for="dir">Destination folder</label>
+          <div class="field-row">
+            <input id="dir" type="text" spellcheck="false" />
+            <button class="btn small" id="btn-browse">Browse</button>
+          </div>
+          <p class="error" id="dir-error" role="alert"></p>
+        </div>
+        <div class="space-note">
+          <span class="space-dot"></span>
+          <span>Make sure the drive has free space for the application. The optional assistant model is downloaded later, from inside the app, and needs several hundred MB more.</span>
+        </div>
+        <div class="actions">
+          <button class="btn ghost" data-back="license">Back</button>
+          <button class="btn primary" id="btn-install">Install</button>
+        </div>
+      </div>
+
+      <!-- Install -->
+      <div class="screen" id="screen-install">
+        <p class="eyebrow">Step 4 of 4</p>
+        <h2 class="heading" id="install-title">Installing</h2>
+        <p class="sub" id="install-phase">Preparing the installation</p>
+        <div class="progress-wrap">
+          <div class="progress"><div class="bar" id="bar"></div></div>
+          <div class="pct"><span id="pct">Working</span></div>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="n" id="stat-files">0</span><span class="l">files</span></div>
+          <div class="stat"><span class="n" id="stat-steps">0</span><span class="l">steps</span></div>
+          <div class="stat"><span class="n" id="stat-elapsed">0s</span><span class="l">elapsed</span></div>
+        </div>
+        <div class="ticker" id="ticker"></div>
+        <div class="actions">
+          <span></span>
+          <span class="muted" id="install-note">Please keep this window open.</span>
+        </div>
+      </div>
+
+      <!-- Done -->
+      <div class="screen" id="screen-done">
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"></circle><path d="M36 62 l16 16 l34 -36"></path></svg>
+        </div>
+        <h2 class="heading">Quantum Vault is installed</h2>
+        <p class="sub" id="done-path"></p>
+        <label class="accept">
+          <input type="checkbox" id="launch-box" checked />
+          <span class="box"></span>
+          <span>Launch Quantum Vault now</span>
+        </label>
+        <div class="actions">
+          <button class="btn ghost" id="btn-log">Show install log</button>
+          <button class="btn primary" id="btn-finish">Finish</button>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div class="screen" id="screen-error">
+        <p class="eyebrow danger">Installation did not complete</p>
+        <h2 class="heading" id="error-title">Something went wrong</h2>
+        <p class="sub" id="error-msg"></p>
+        <div class="actions">
+          <button class="btn ghost" id="btn-error-log">Show install log</button>
+          <button class="btn primary" id="btn-retry">Back to location</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
